@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}EstudioDodo{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('img/Logoiconopestana.ico') }}" />
+        
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="{{ asset('css/style.css') }}" />
+</head>
+    <body>
+        {% block nav %}
+            <!-- Header -->
+	<header id="home">
+		<!-- Background Image -->
+		<div class="bg-img" style="background-image: url('{{ asset('./img/working.jpg') }}');">
+		</div>
+		<!-- /Background Image -->
+		<!-- Nav -->
+		<nav id="nav" class="navbar nav-transparent">
+			<div class="container">
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a href="index.html.twig">
+							<img class="logo" src="{{ asset('img/LogoDODOhorizontal.png') }}"  alt="logo">
+							<img class="logo-alt" src="{{ asset('img/LogoDODO-white.png') }}" alt="logo">
+						</a>
+					</div>
+					<!-- /Logo -->
+				</div>
+				<!--  Main navigation  -->
+				<ul class="main-nav nav navbar-nav navbar-right">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#service">Servicios</a></li>
+					<li><a href="#team">Equipo de trabajo</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+				<!-- /Main navigation -->
+			</div>
+		</nav>
+		<!-- /Nav -->
+		<!-- home wrapper -->
+		<div class="home-wrapper">
+			<div class="container">
+				<div class="row">
+					<!-- home content -->
+					<div class="col-md-10 col-md-offset-1">
+						<div class="home-content">
+							<h1 class="white-text">Estudio DODO</h1>
+							<p class="white-text">Estamos ultimando detalles.</p>
+						</div>
+					</div>
+					<!-- /home content -->
+				</div>
+			</div>
+		</div>
+        <!-- /home wrapper -->
+    </header>
+		{# /header #}
+        {% endblock %}
+
+        {% block body %}{% endblock %}
+
+{% block footer %}
+        		<footer id="footer" class="sm-padding bg-dark">
+		<!-- Container -->
+		<div class="container">
+			<!-- Row -->
+			<div class="row">
+				<div class="col-md-12">
+					<!-- footer logo -->
+					<div class="footer-logo">
+						<a href="index.html"><img src="img/LogoDODO-simple.png" alt="logo"></a>
+					</div>
+					<!-- /footer logo -->
+					<!-- footer follow -->
+					<ul class="footer-follow">
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>	
+						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+					</ul>
+					<!-- /footer follow -->
+					<!-- footer copyright -->
+					<div class="footer-copyright">
+						<p> copyright </p>
+					</div>
+					<!-- /footer copyright -->
+				</div>
+			</div>
+			<!-- /Row -->
+		</div>
+		<!-- /Container -->
+	</footer>
+	<!-- /Footer -->
+{% endblock %}
+	</header>
+        {% block javascripts %}
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        {% endblock %}
+    </body>
+</html>
